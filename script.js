@@ -26,10 +26,12 @@ function initDemo() {
     $("#startChat").click(function() {
       // alert("mmmm");
       $("#hideSegment").show();
+      $("#startHere").hide();
     });
   });
 
   $("#hideSegment").hide();
+  $("#startHere").show();
   // myChatObj.getEngagement();
 }
 

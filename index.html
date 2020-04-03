@@ -151,7 +151,7 @@
 
         <nav role="navigation" class="navbar-collapse" style="background-color: #00559a;width: 100%;">
             <div style="padding-left: 100px;">
-                <img src="./assets/image/bell_logo.PNG" class="logo" />
+                <img style="margin-top: 15px" src="./assets/image/bell_logo.PNG" class="logo" />
                 <ul class="nav navbar-nav" style="color: white;">
                     <li><a href="#" style="color: white;float: left;">
                             <h3>Shop</h3>
@@ -171,7 +171,7 @@
 
 
 
-    <div style="padding-top:80px;padding-left: 250px;">
+    <div style="padding-top:80px; padding-left: 250px;">
         <p>
             <a  href="#"><span><i class="fa fa-home" style="size: 30px;"></span></i>&nbsp; Support</a>
             
@@ -185,80 +185,88 @@
             
     </div>
     
-    <div class="container">
+    <div class="container" style="width: 90%; max-width: 1000px; height: 100%;">
 
         <div id="engagementPlaceholder"></div>
 
-        <div id="chatWindow">
-            <div class="wrapper">
+        <div class="buttonwrapper" style="text-align: center;">
+            <!-- <img src="./assets/image/headphone.png" style="width: 50px; height: 50px;" alt="">-->
+             <!-- <div style="margin-top: 25px;">
+                 <span style="font-size: x-large;">
+                    Need help with your Bell services? Start here for support.
+                </span>
+             </div>
+             <form onsubmit="return false">
+                 <div style="margin-top: 25px;">
+                     <button id="startChat" class="btn btn-lg btn-primary">Start Repair</button>
+                 </div>
+             </form> -->
 
-                <div class="buttonwrapper" style="text-align: center;">
-                   <!-- <img src="./assets/image/headphone.png" style="width: 50px; height: 50px;" alt="">-->
-                    <div>
-                        <span style="font-size: large;">Need Help? Start here to get support.</span>
+             <div id="startHere" class="jumbotron">
+                <h2>Need help with your Bell services?</h2>
+                <p>Start here for support.</p>
+                <p style="margin-top:25px;"><button id="startChat" class="btn btn-lg btn-primary">Start Repair</button></p>
+              </div>
+         </div>
+
+         
+
+        <div id="chatWindow" style="width: 100%; height: 100%;">
+            <div class="wrapper" id="hideSegment">
+        
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div id="topChatBar" style="display: block">
+                            <div id="agentIsTyping"></div>
+                            <form onsubmit="return false">
+                                <div>
+                                    <button id="closeChat" class="btn btn-sm btn-default" style="float: right;">Close Chat</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    <form onsubmit="return false">
-                        <div>
-                            <button id="startChat" class="btn btn-sm">Start Chat</button>
-                        </div>
-                    </form>
                 </div>
-            <div id="hideSegment" >
-                <div id="topChatBar" style="display: block">
-                <div id="agentIsTyping"></div>
-                    <form onsubmit="return false">
-                        <div>
-                            <button id="closeChat" class="btn  btn-sm" style="float: right;">Close Chat</button>
-                        </div>
-                    </form>
-                </div>
-
-                <p class="chatbox">
-
-                    <div id="chatLines" class="scrollbar-primary">
-
+            
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div id="chatLines" class="scrollbar-primary"></div>
                     </div>
+                </div>
 
+                <div class="row" style="margin-top: 5px">
+        
+                    <div class="col-lg-12" >
+                        <form onsubmit="return false">
+                            <div class="input-group input-group-lg">
+                                
+                                <input id="textline" type="text" class="form-control" placeholder="Enter message here...">
+                                <span class="input-group-btn">
+                                    <button id="sendButton" class="btn btn-default btn-primary">Send</button>
+                                </span>
 
-                </p>
-                <p>
-
-                    <form onsubmit="return false">
-                        <div class="form-group">
-                        <p>    
-                            <input id="textline" type="text" class="form-control" placeholder="Enter text here..." />
-                        </p>
-                        <p>
-                            <button id="sendButton" class="btn">Send Message</button>
-                        </p>
-                        </div>
-                    </form>
-                </p>
-
-
-
-                <p>
-
-                    <form class="hidden" onsubmit="return false">
-                        <div class="form-group">
-                            <input type="text" id="visitorName" class="form-control input-sm"
-                                placeholder="Enter name..." />
-                            <button id="setvisitorName" class="btn btn-sm">Set Name</button>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="emailAddress" class="form-control input-sm"
-                                placeholder="Enter email address..." />
-                            <button id="sendTranscript" class="btn btn-sm">Send Transcript</button>
-                        </div>
-
-                    </form>
-                </p>
-        </div>
-
-
+                            </div><!-- /input-group -->
+                        </form>
+                    </div><!-- /.col-lg-6 -->
+                </div>
+            
+                <!-- <div class="row" style="margin-top: 5px">
+                    <div class="col-lg-12" >
+                        <form class="hidden" onsubmit="return false">
+                            <div class="form-group">
+                                <input type="text" id="visitorName" class="form-control input-sm"
+                                    placeholder="Enter name..." />
+                                <button id="setvisitorName" class="btn btn-sm">Set Name</button>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="emailAddress" class="form-control input-sm"
+                                    placeholder="Enter email address..." />
+                                <button id="sendTranscript" class="btn btn-sm">Send Transcript</button>
+                            </div>
+                        </form>
+                    </div>
+                </div> -->
             </div>
         </div>
-
     </div>
 
 
